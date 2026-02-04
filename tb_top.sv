@@ -1,7 +1,7 @@
 module tb_top();
     initial begin
         $display("Hello, SystemVerilog!");
-        $finish;
+        
     end
 
     initial begin
@@ -27,5 +27,11 @@ module tb_top();
             $display("Clock tick at time %0t", $time);
         end 
     endtask
+
+
+    initial begin
+        #20ns;
+        $finish;
+    end
     
 endmodule 
